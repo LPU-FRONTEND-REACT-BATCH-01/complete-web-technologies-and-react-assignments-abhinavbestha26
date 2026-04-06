@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React.dev Clone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      min-height: 100vh;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+
+    .page {
+      min-height: 100vh;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 48px;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      gap: 20px;
+    }
+
+    .nav-brand,
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      min-width: 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      position: relative;
+    }
+
+    .logo-mark::before,
+    .logo-mark::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border: 2px solid #61dafb;
+      border-radius: 9999px;
+    }
+
+    .logo-mark::before {
+      transform: rotate(60deg);
+    }
+
+    .logo-mark::after {
+      transform: rotate(-60deg);
+    }
+
+    .nav-search {
+      flex: 1;
+      max-width: 460px;
+      min-width: 280px;
+      padding: 14px 18px;
+      border-radius: 9999px;
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      color: #334155;
+      outline: none;
+      box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.05);
+    }
+
+    .nav-search::placeholder {
+      color: #94a3b8;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+      color: #475569;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links span,
+    .nav-links button {
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: inherit;
+      font: inherit;
+    }
+
+    .icon-group {
+      display: flex;
+      gap: 10px;
+      font-size: 18px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 48px 120px;
+    }
+
+    .hero-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .hero-art {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 40px;
+    }
+
+    .orbit {
+      position: absolute;
+      inset: 0;
+      border: 4px solid #61dafb;
+      border-radius: 9999px;
+      opacity: 0.9;
+    }
+
+    .center-dot {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      background: #61dafb;
+      border-radius: 9999px;
+      transform: translate(-50%, -50%);
+    }
+
+    .hero-title {
+      font-size: clamp(3.6rem, 5vw, 5rem);
+      font-weight: 800;
+      line-height: 0.95;
+      margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+      max-width: 640px;
+      margin: 0 auto 36px;
+      font-size: 1.15rem;
+      color: #475569;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 9999px;
+      padding: 14px 28px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: #0f172a;
+      color: #ffffff;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+    }
+
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    @media (max-width: 720px) {
+      .navbar {
+        flex-wrap: wrap;
+        gap: 14px;
+        padding: 18px 24px;
+      }
+
+      .nav-brand,
+      .nav-actions {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .nav-search {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .hero {
+        padding: 72px 24px 84px;
+      }
+
+      .hero-title {
+        font-size: 3.4rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="navbar">
+      <div class="nav-brand">
+        <div class="logo">
+          <div class="logo-mark"></div>
+          <span>v19.2</span>
+        </div>
+      </div>
+
+      <input type="search" class="nav-search" placeholder="Search (Ctrl + K)" aria-label="Search site">
+
+      <nav class="nav-actions nav-links" aria-label="Primary navigation">
+        <span>Learn</span>
+        <span>Reference</span>
+        <span>Community</span>
+        <span>Blog</span>
+        <div class="icon-group" aria-hidden="true">🌙 🌐 ⚙️</div>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div class="hero-inner">
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit"></div>
+          <div class="center-dot"></div>
+        </div>
+
+        <h1 class="hero-title">React</h1>
+        <p class="hero-subtitle">The library for web and native user interfaces. Build component-driven apps with declarative code and fast updates.</p>
+        
+        <div class="hero-actions">
+          <button class="btn btn-primary">Learn React</button>
+          <button class="btn btn-secondary">API Reference</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

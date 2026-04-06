@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:hover{
+            color: aqua;
+            background-color: yellow;
+        }
+        a:link{
+            color: red;
+        }
+        a:active{
+            color: darkblue;
+        }
+        a:visited{
+            color: green;
+        }
+        
+        input:focus{
+            background-color: blue;
+        }
+        h1:hover::before{
+            content: "Hello ";
+            color: aquamarine
+            
+        }
+        h1:hover::after{
+            content: " Bestha";
+            color: blueviolet;
+        }
+        h1:hover{
+            color: yellow;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.amazon.in">amazon.com</a><br><br>
+    <input type="text"><br><br>
+    <span><h1>Abhinav</h1></span>
+    
+</body>
+</html>
