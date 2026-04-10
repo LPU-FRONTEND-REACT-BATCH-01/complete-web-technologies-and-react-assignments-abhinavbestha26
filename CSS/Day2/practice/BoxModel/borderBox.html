@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /*box-sizing:border-box == it wont break the layout of the page(because if any padding and bordr is increased it effects the content but not the layout)*/
+        }
+        .box{
+            height: 200px;
+            width: 300px;
+            padding: 15px;
+            border: 2px solid yellow;
+        }
+        .box1{
+            box-sizing: border-box;
+            background-color: bisque;
+        }
+        .box2{
+            background-color: aqua;
+            box-sizing: content-box;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">Box1</div>
+    <div class="box box2">Box2</div>
+
+</body>
+</html>

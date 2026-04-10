@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            background-color: yellow;
+            padding: 5px;
+            margin-bottom: 20px;
+            text-align: left;
+            font-size: 20px;
+        }
+        body{
+            padding: 30px;
+        }
+        td{
+            padding: 10px;
+        }
+
+        .submit{
+            padding: 5px;
+            margin-left: 600px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header><b><i>🍕Pizza mania🍕</i></b></header>
+    <form>
+        <fieldset>
+            <legend><b>🍕Pizza Order Here🍕</b></legend>
+            <table>
+                <tr>
+                    <td><label for="firstname"><b>First Name:</b></label></td>
+                    <td><input id="firstname" type="text"  name="firstname" placeholder="First Name"></td>
+                </tr>
+                <tr>
+                    <td><label for="lastname"><b>Last Name:</b></label></td>
+                    <td><input id="lastname" type="text" name="lastname" placeholder="Last Name"></td>
+                </tr>
+                <tr>
+                    <td><label for="email"><b>Email:</b></label></td>
+                    <td><input id="email" type="email" name="email" placeholder="abc@example.com"></td>
+                </tr>
+                <tr>
+                    <td><label for="contact"><b>Contact:</b></label></td>
+                    <td><input id="contact" type="tel" name="contact" placeholder="Ex-8989898989"></td>
+                </tr>
+                <tr>
+                    <td><label for="deliverydate"><b>Preferred Delivery Date:</b></label></td>
+                    <td><input id="deliverydate" type="date" name="deliverydate"></td>
+                </tr>
+                <tr>
+                    <td><label><b>Size:</b></label></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" value="small" name="size">small</td>
+                    <td><input type="radio" value="medium" name="size">medium</td>
+                    <td><input type="radio" value="large" name="size">large</td>
+                </tr>
+                <tr>
+                    <td><label for="outlet"><b><i><mark>Outlet:</mark></i></b></label></td>
+                    <td>
+                        <select id="outlet" name="outlet">
+                            <option value="">Select Outlet</option>
+                            <option value="hyderabad" >Hyderabad</option>
+                            <option value="bengaluru" >Bengaluru</option>
+                            <option value="chennai" >Chennai</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label><b><i>Menu⬇</i></b></label></td>
+                </tr>
+                <tr>
+                    <td><img src="./Assets/Hawaiian.png" alt="Hawaiian Pizza" width="100"></td>
+                    <td><input type="checkbox" id="hawaiian" name="menu" value="hawaiian">  
+                        <label for="hawaiian"><b>Hawaiian(150.00 ₹ <strike>170.00₹ </strike>)</b></label>  
+                    </td>
+                    <td>
+                        <select name="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>                        
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="./Assets/Pepperoni.png" alt="Pepperoni Pizza" width="100"></td>
+                    <td><input type="checkbox" id="pepperoni" name="menu" value="pepperoni">  
+                        <label for="pepperoni"><b>Pepperoni(180.00 ₹ <strike>200.00₹ </strike>)</b></label>  
+                    </td>
+                    <td>
+                        <select name="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>                        
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="./Assets/Vegetable.png" alt="Vegetable Pizza" width="100"></td>
+                    <td>
+                        <input id="vegetable" type="checkbox" name="menu" value="vegetable">
+                        <label for="vegetable"><b>Vegetable(130.00 ₹ <strike>170.00₹</strike>)</b></label>
+                    </td>
+                    <td>
+                        <select name="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><label><b><i>Extra Details:⬇</i></b></label></td>
+                </tr>
+
+                <tr>
+                    <td><img src="./Assets/creditcardLogo.png" alt="card logo" width="40"></td>
+                    <td><label for="card"><b>Credit Card:</b></label></td>
+                    <td><input id="card" type="text" placeholder="1234-5678-9123-1111"></td>
+                    <td><button>Verify Card</button></td>
+                </tr>
+
+                <tr>
+                    <td><img src="./Assets/pinLogo.png" alt="pin logo" width="40"></td>
+                    <td><label for="pin"><b>Pin:</b></label></td>
+                    <td><input id="pin" type="text" placeholder="421604"></td>
+                </tr>
+                <tr>
+                    <td><img src="./Assets/imageLogo.png" alt="photo logo" width="40"></td>
+                    <td><label for="photo"><b><u><i><mark>Upload photo for discount:</mark></i></u></b></label></td>
+                    <td><input id="photo" type="file"></td>
+                </tr>
+                <tr>
+                    <td><img src="./Assets/notesLogo.png" alt="notes logo" width="40"></td>
+                    <td><label for="notes"><b><i><mark>Additional Note:</mark></i></b></label></td>
+                    <td><textarea id="notes" placeholder="If any additional Requirement There Please Mention Here."></textarea></td>
+                </tr>
+                <tr>
+                    <td><img src="./Assets/starLogo.png" alt="starlogo" width="40"></td>
+                    <td><label for="rating"><b><i><mark>Rating:</mark></i></b></label></td>
+                    <td><input id="rating" type="range"></td>
+                </tr>
+            </table>
+            <button class="submit" type="submit">Submit Order</button>
+        </fieldset>
+    </form>
+</body>
+</html>
