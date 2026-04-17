@@ -1,0 +1,14 @@
+{
+    "compilerOptions":{
+        "rootDir":"./Day2/src",
+        "outDir": "./dist",
+        "noEmitOnError":true,
+        "strict":true,//it will not accept implicit any decleration
+        "target": "es2015",
+        "module": "commonjs",
+        "removeComments": false
+
+    },
+    "include": ["Day2"]
+
+}

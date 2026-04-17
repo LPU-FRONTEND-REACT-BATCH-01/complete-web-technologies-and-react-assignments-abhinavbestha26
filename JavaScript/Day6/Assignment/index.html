@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+        div{
+            display: flex;
+            background-color: red;
+            height: 70px;
+            flex-direction: column;
+        }
+        ul{
+            display: flex;
+            justify-content:right;
+            gap: 15px;
+        }
+        li{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 30px;
+            padding: 20px;
+        }
+        li:last-child{
+            padding-right: 30px;
+        }
+        li:hover{
+            color: yellow;
+        }
+        a {
+        text-decoration: none;
+        color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <ul>
+                <li>
+                    <a href="products.html" target="_self">Products</a>
+                </li>
+                <li>
+                    <a href="cart.html" target="_self">Cart</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
