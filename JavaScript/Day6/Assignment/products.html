@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+        .navbar{
+            display: flex;
+            background-color: red;
+            height: 70px;
+            flex-direction: column;
+        }
+        .navul{
+            display: flex;
+            justify-content:right;
+            gap: 15px;
+        }
+        .navul li{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 30px;
+            padding: 20px;
+        }
+        li:last-child{
+            padding-right: 30px;
+        }
+        li:hover{
+            color: yellow;
+        }
+        a {
+        text-decoration: none;
+        color: inherit;
+        }
+    </style>
+</head>
+<body>
+
+  <nav>
+        <div class="navbar">
+            <ul class="navul">
+                <li>
+                    <a href="index.html" target="_self">Home</a>
+                </li>
+                <li>
+                    <a href="cart.html" target="_self">Cart</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+  <h1>Products</h1>
+
+  <div id="product-container">
+    <ul>
+
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

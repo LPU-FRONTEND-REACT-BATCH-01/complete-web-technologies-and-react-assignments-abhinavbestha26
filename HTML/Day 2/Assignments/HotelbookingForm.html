@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturant Checkin Form</title>
+</head>
+
+<body>
+    <form action="" method="post">
+
+        <label for="name">Name</label>
+        <br>
+        <input type="text" name="firstName" placeholder="first name" id="name"> <input type="text" name="secondName"
+            placeholder="second name" id="name">
+        <br>
+        <br>
+
+        <label for="">Gender:</label> <input id="male" type="radio" name="gender" value="male"> <label
+            for="male">Male</label> <input type="radio" id="female" name="gender" value="female"><label
+            for="female">Female</label>
+        <br>
+        <br>
+
+        <label for="email">Email</label>
+        <br>
+        <input type="email" name="email" placeholder="ex: myemail@gmail.com" id="email">
+        <br>
+        <br>
+
+        <label for="roomType">Room Type</label>
+        <select name="roomType" id="roomType">
+            <option value="">--Select--</option>
+            <option value="single">Single</option>
+            <option value="double">Double</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="guestsNum">Number Of Guests</label>
+        <input type="number" id="guestsNum" min="0" max="6">
+        <br>
+        <br>
+
+        <label for="arrivalTime">Arrival Date & Time</label>
+        <br>
+        <input type="datetime-local" id="arrivalTime" name="arrivalTime">
+        <br>
+        <label for="departureTime">Departure Date & Time</label>
+        <br>
+        <input type="datetime-local" id="departureTime" name="departureTime">
+        <br>
+        <br>
+
+        <label for="city">City</label>
+        <br>
+        <select name="city" id="city">
+            <option value="">--Select--</option>
+            <option value="jalandhar">Jalandhar</option>
+            <option value="ludhiana">Ludhiana</option>
+        </select>
+        <br>
+        <br>
+
+        <input type="checkbox" name="t&c" value="agreed"> <label for="">Agree Terms and Conditions</label>
+        <br>
+        <br>
+
+        <textarea name="specialRequest" id="" placeholder="Special Requests"></textarea>
+        <br>
+        <br>
+
+        <input type="submit"> <input type="reset">
+
+    </form>
+
+</body>
+
+</html>
